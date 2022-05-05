@@ -256,5 +256,35 @@
         "article_title": "Космические силы США не позволят ИИ выйти из-под контроля",
         "article_url": "https://www.securitylab.ru/news/531468.php",
         "article_desc": "На космическом симпозиуме в Колорадо был представлен план по сдерживанию военного ИИ."
+    },
+    "531485": {
+        "article_date_timestamp": 1651767545.0,
+        "article_title": "Крупнейшие мировые технологические компании хотят уничтожить пароли в День паролей",
+        "article_url": "https://www.securitylab.ru/news/531485.php",
+        "article_desc": "Станет ли passkey от Google “убийцей паролей”?"
+    },
+    "531484": {
+        "article_date_timestamp": 1651766699.0,
+        "article_title": "В антивирусах Avast и AVG были исправлены многолетние уязвимости",
+        "article_url": "https://www.securitylab.ru/news/531484.php",
+        "article_desc": "Уязвимости позволяют локальному пользователю повысить привилегии на системе."
+    },
+    "531483": {
+        "article_date_timestamp": 1651764484.0,
+        "article_title": "Tor повышает скорость работы сети",
+        "article_url": "https://www.securitylab.ru/news/531483.php",
+        "article_desc": "Новая технология браузера позволит снизить задержку сети"
+    },
+    "531487": {
+        "article_date_timestamp": 1651776462.0,
+        "article_title": "Хактивисты из Украинской ИТ армии нарушили работу пивоваренных заводов в России",
+        "article_url": "https://www.securitylab.ru/news/531487.php",
+        "article_desc": "Сбой связан с DDoS атакой на систему ЕГАИС"
+    },
+    "531486": {
+        "article_date_timestamp": 1651776015.0,
+        "article_title": "TeamViewer объявил о прекращении работы в России",
+        "article_url": "https://www.securitylab.ru/news/531486.php",
+        "article_desc": "Немецкий сервис перестанет работать в России и Белоруссии"
     }
 }
