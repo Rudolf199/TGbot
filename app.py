@@ -6,11 +6,12 @@ from aiogram.utils.markdown import hbold, hunderline, hcode, hlink
 from aiogram.dispatcher.filters import Text
 from config import token, user_id
 from news import check_news_update
+from sqlighter import SQLighter
 
 
 bot = Bot(token=token, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
-
+db = SQLighter('database.db')
 # start_buttons = ["📰 Все новости", "⬅ Последние 5 новостей", "🍅🗞️Свежие новости"]
 @dp.message_handler(commands="start")
 async def start(message: types.Message):
@@ -24,11 +25,40 @@ async def start(message: types.Message):
             types.KeyboardButton(text="⬅ Последние 5 новостей"),
             types.KeyboardButton(text="🍅🗞️Свежие новости")
         ],
+        [
+            types.KeyboardButton(text="✔ Подписаться"),
+            types.KeyboardButton(text="❌ Отписаться")
+        ],
         ],
         resize_keyboard=True)
     # keyboard.add(*start_buttons)
 
     await message.answer("Лента новостей", reply_markup=start_buttons)
+
+@dp.message_handler(Text(equals="✔ Подписаться"))
+async def subscribe(message: types.Message):
+    if not db.subscriber_exists(message.from_user.id):
+        # если юзера нет в базе, добавляем его
+        db.add_subscriber(message.from_user.id)
+    else:
+        # если он есть, то просто обновляем ему статус
+        db.update_subscription(message.from_user.id, True)
+
+    await message.answer("Вы подписались на рассылку 📧")
+
+@dp.message_handler(Text(equals="❌ Отписаться"))
+async def subscribe(message: types.Message):
+    if not db.subscriber_exists(message.from_user.id):
+        # если юзера нет в базе, добавляем его с неактивной подпиской, запоминаем его
+        db.add_subscriber(message.from_user.id, False)
+        await message.answer("Вы не подписаны 🤨")
+    else:
+        # если он есть, то просто обновляем ему статус
+        db.update_subscription(message.from_user.id, False)
+        await message.answer("Вы отписались от рассылки👋")
+
+    # await message.answer("Вы подписались на рассылку 📧")
+
 
 """@dp.message_handler(commands="start")
 async def start(message: types.Message):
@@ -88,19 +118,22 @@ async def get_fresh_news(message: types.Message):
 async def news_every_minute():
     while True:
         fresh_news = check_news_update()
-
+        # получаем список подписчиков
+        subscribers = db.get_subscriptions()
         if len(fresh_news) >= 1:
             for k, v in sorted(fresh_news.items()):
                 news = f"{hbold(datetime.datetime.fromtimestamp(v['article_date_timestamp']))}\n" \
                        f"{hlink(v['article_title'], v['article_url'])}"
-
-                # get your id @userinfobot
-                await bot.send_message(user_id, news, disable_notification=True)
+                for s in subscribers:
+                    # get your id @userinfobot
+                    # отправляем подписчикам
+                    await bot.send_message(s[1], news, disable_notification=True)
 
         else:
-            await bot.send_message(user_id, "Пока нет свежих новостей...", disable_notification=True)
+            for s in subscribers:
+                await bot.send_message(s[1], "Пока нет свежих новостей...", disable_notification=True)
 
-        await asyncio.sleep(40)
+        await asyncio.sleep(1)
 
 
 if __name__ == '__main__':
