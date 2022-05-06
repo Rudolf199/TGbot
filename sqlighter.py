@@ -28,6 +28,7 @@ class SQLighter:
         with self.connection:
             return self.cursor.execute("UPDATE `subscriptions` SET `status` = ? WHERE `user_id` = ?", (status, user_id))
 
+
     def close(self):
         """Закрываем соединение с БД"""
         self.connection.close()

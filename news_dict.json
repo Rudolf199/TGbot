@@ -286,5 +286,83 @@
         "article_title": "TeamViewer объявил о прекращении работы в России",
         "article_url": "https://www.securitylab.ru/news/531486.php",
         "article_desc": "Немецкий сервис перестанет работать в России и Белоруссии"
+    },
+    "531489": {
+        "article_date_timestamp": 1651810607.0,
+        "article_title": "Производство российских процессоров «Байкал» может быть остановлено из-за санкций",
+        "article_url": "https://www.securitylab.ru/news/531489.php",
+        "article_desc": "Компании АО «Байкал Электроникс» может быть запрещено использовать британскую архитектуру ARM."
+    },
+    "531488": {
+        "article_date_timestamp": 1651809797.0,
+        "article_title": "В России к 2024 году появится 15 киберполигонов",
+        "article_url": "https://www.securitylab.ru/news/531488.php",
+        "article_desc": "Всего в 2022 году в опорных центрах Национального киберполигона пройдет более 70 киберучений."
+    },
+    "531495": {
+        "article_date_timestamp": 1651834008.0,
+        "article_title": "Хакер-подросток предотвратил мировой кризис и стал миллионером",
+        "article_url": "https://www.securitylab.ru/news/531495.php",
+        "article_desc": "Благодаря 19-летнему специалисту была исправлена уязвимость, способная вызвать обвал фондового рынка."
+    },
+    "531498": {
+        "article_date_timestamp": 1651832316.0,
+        "article_title": "Killnet угрожает отключить аппараты ИВЛ в больницах Великобритании",
+        "article_url": "https://www.securitylab.ru/news/531498.php",
+        "article_desc": "Killnet освободить арестованного хакера."
+    },
+    "531497": {
+        "article_date_timestamp": 1651831789.0,
+        "article_title": "6 способов «взломать» сотрудника: как защитить компанию от человеческой ошибки",
+        "article_url": "https://www.securitylab.ru/news/531497.php",
+        "article_desc": "19 мая в 11:00 узнайте, как уберечь сотрудников от самых распространенных уловок киберпреступников."
+    },
+    "531496": {
+        "article_date_timestamp": 1651828990.0,
+        "article_title": "Данные тысяч заемщиков ENCollect утекли в сеть",
+        "article_url": "https://www.securitylab.ru/news/531496.php",
+        "article_desc": "Утечка составила 5,8 ГБ и состояла в общей сложности из более чем полутора миллиона записей."
+    },
+    "531494": {
+        "article_date_timestamp": 1651822489.0,
+        "article_title": "NIST обновил руководство по управлению киберрисками, связанными с цепочками поставок",
+        "article_url": "https://www.securitylab.ru/news/531494.php",
+        "article_desc": "В документе представлены практики для выявления, оценки и реагирования на риски на разных этапах цепочки поставок."
+    },
+    "531493": {
+        "article_date_timestamp": 1651820118.0,
+        "article_title": "Эксперты выявили наиболее эффективный сценарий телефонного мошенничества",
+        "article_url": "https://www.securitylab.ru/news/531493.php",
+        "article_desc": "Специалисты изучили более ста часов телефонных звонков с помощью технологий машинного обучения и обработки естественной речи."
+    },
+    "531491": {
+        "article_date_timestamp": 1651817408.0,
+        "article_title": "Венчурный партнер ЦРУ инвестировал в ИИ и квантовые алгоритмы от «дочки» Google",
+        "article_url": "https://www.securitylab.ru/news/531491.php",
+        "article_desc": "Целью инвестиций в Sandbox AQ является разработка ПО для шифрования, устойчивого ко взломам с использованием квантовых технологий."
+    },
+    "531492": {
+        "article_date_timestamp": 1651817132.0,
+        "article_title": "Новый червь Raspberry Robin загружает вредоносное ПО через утилиты Windows",
+        "article_url": "https://www.securitylab.ru/news/531492.php",
+        "article_desc": "Специалисты Red Canary обнаружили нового червя, распространяющегося с помощью USB-накопителей."
+    },
+    "531490": {
+        "article_date_timestamp": 1651816830.0,
+        "article_title": "Google устраняет активно эксплуатируемую уязвимость в ядре Android",
+        "article_url": "https://www.securitylab.ru/news/531490.php",
+        "article_desc": "Уязвимость представляет собой ошибку повышения привилегий в ядре Linux."
+    },
+    "531499": {
+        "article_date_timestamp": 1651836664.0,
+        "article_title": "ФБР: В 2021 году киберпреступления обошлись жертвам в $6,9 млрд",
+        "article_url": "https://www.securitylab.ru/news/531499.php",
+        "article_desc": "С каждым годом масштабы и ущерб от киберпреступлений продолжают расти."
+    },
+    "531500": {
+        "article_date_timestamp": 1651837849.0,
+        "article_title": "Компания Google с 5 мая запретила разработчикам в России загружать и обновлять платные приложения в Google Play",
+        "article_url": "https://www.securitylab.ru/news/531500.php",
+        "article_desc": ""
     }
 }
