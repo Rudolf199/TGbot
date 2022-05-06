@@ -364,5 +364,35 @@
         "article_title": "Компания Google с 5 мая запретила разработчикам в России загружать и обновлять платные приложения в Google Play",
         "article_url": "https://www.securitylab.ru/news/531500.php",
         "article_desc": ""
+    },
+    "531501": {
+        "article_date_timestamp": 1651837227.0,
+        "article_title": "Facebook прекратит использование Nearby Friends и других функций, использующих местоположение",
+        "article_url": "https://www.securitylab.ru/news/531501.php",
+        "article_desc": "Функции исчезнут из соцсети 31 мая 2022 года."
+    },
+    "531502": {
+        "article_date_timestamp": 1651841000.0,
+        "article_title": "Обнаружена критическая уязвимость RCE в ПО dotCMS",
+        "article_url": "https://www.securitylab.ru/news/531502.php",
+        "article_desc": "Предварительно авторизованный хакер может удаленно выполнять код и загружать произвольные файлы в систему."
+    },
+    "531503": {
+        "article_date_timestamp": 1651842956.0,
+        "article_title": "Android 13 ограничит использование сторонних приложений",
+        "article_url": "https://www.securitylab.ru/news/531503.php",
+        "article_desc": "Пользователи не смогут давать разрешения на доступ приложениям, загруженным не из Google Play Store."
+    },
+    "531504": {
+        "article_date_timestamp": 1651844267.0,
+        "article_title": "Байден развивает квантовые вычисления для защиты от взлома оппонентов",
+        "article_url": "https://www.securitylab.ru/news/531504.php",
+        "article_desc": "Президент США Джо Байден в среду издал два указа, направленных на опережение других стран в области квантовых вычислений и криптографии."
+    },
+    "531505": {
+        "article_date_timestamp": 1651844661.0,
+        "article_title": "Как пациенткам клиник планирования семьи сохранить приватность в цифровую эпоху",
+        "article_url": "https://www.securitylab.ru/news/531505.php",
+        "article_desc": "Специалист подготовила для женщин, планирующих аборт, рекомендации по защите своих данных от попадания в чужие руки."
     }
 }

@@ -1,0 +1,7 @@
+aiogram
+asyncio
+sqlite3
+requests
+json
+datetime
+time
