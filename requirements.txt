@@ -2,6 +2,5 @@ beautifulsoup4
 datetime
 asyncio
 requests
-sqlite3
 aiogram
 
