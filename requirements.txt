@@ -8,13 +8,16 @@ certifi==2019.11.28
 cffi==1.15.0
 chardet==3.0.4
 Click==7.0
+cloud-init==22.1
 colorama==0.4.3
+command-not-found==0.3
 configobj==5.0.6
 constantly==15.1.0
 coverage==6.3.2
 cryptography==2.8
 dbus-python==1.2.16
 distro==1.4.0
+distro-info===0.23ubuntu1
 entrypoints==0.3
 fabric==2.7.0
 fake==0.8
@@ -31,6 +34,7 @@ jsonpatch==1.22
 jsonpointer==2.0
 jsonschema==3.2.0
 keyring==18.0.1
+language-selector==0.1
 launchpadlib==1.10.13
 lazr.restfulclient==0.14.2
 lazr.uri==1.0.3
@@ -62,6 +66,8 @@ pyrsistent==0.15.5
 pyserial==3.4
 pytest==7.1.1
 pytest-cov==3.0.0
+python-apt==2.0.0+ubuntu0.20.4.7
+python-debian===0.1.36ubuntu1
 PyYAML==5.3.1
 requests==2.22.0
 requests-mock==1.9.3
