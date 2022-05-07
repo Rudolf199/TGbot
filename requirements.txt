@@ -17,7 +17,7 @@ coverage==6.3.2
 cryptography==2.8
 dbus-python==1.2.16
 distro==1.4.0
-distro-info===0.23ubuntu1
+
 entrypoints==0.3
 fabric==2.7.0
 fake==0.8
