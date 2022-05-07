@@ -1,10 +1,11 @@
-import sqlite3
+import psycopg2
+
 
 class SQLighter:
 
     def __init__(self, database):
         """Подключаемся к БД и сохраняем курсор соединения"""
-        self.connection = sqlite3.connect(database)
+        self.connection = psycopg2.connect(database, sslmode="require")
         self.cursor = self.connection.cursor()
 
     def get_subscriptions(self, status = True):

@@ -8,11 +8,11 @@ from config import token, user_id, chat_id, not_sub_message, channel_url
 from inlines import check_sub_menu
 from news import check_news_update
 from sqlighter import SQLighter
-
+from config import db_uri
 
 bot = Bot(token=token, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
-db = SQLighter('database.db')
+db = SQLighter(db_uri)
 # start_buttons = ["📰 Все новости", "⬅ Последние 5 новостей", "🍅🗞️Свежие новости"]
 
 def check_sub_channel(chat_member):

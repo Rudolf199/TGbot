@@ -3,4 +3,5 @@ datetime
 asyncio
 requests
 aiogram
+psycopg2
 
