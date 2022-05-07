@@ -8,16 +8,13 @@ certifi==2019.11.28
 cffi==1.15.0
 chardet==3.0.4
 Click==7.0
-
 colorama==0.4.3
-
 configobj==5.0.6
 constantly==15.1.0
 coverage==6.3.2
 cryptography==2.8
 dbus-python==1.2.16
 distro==1.4.0
-
 entrypoints==0.3
 fabric==2.7.0
 fake==0.8
