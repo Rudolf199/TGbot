@@ -60,6 +60,7 @@ async def start(message: types.Message):
 
 @dp.message_handler(Text(equals="✔ Подписаться"))
 async def subscribe(message: types.Message):
+    await message.answer("this works")
     if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
         if not db.subscriber_exists(message.from_user.id):
             # если юзера нет в базе, добавляем его
@@ -86,6 +87,7 @@ async def sub_channel_done(message: types.Message):
 
 @dp.message_handler(Text(equals="❌ Отписаться"))
 async def unsubscribe(message: types.Message):
+    await message.answer("this works too")
     if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
         if not db.subscriber_exists(message.from_user.id):
             # если юзера нет в базе, добавляем его с неактивной подпиской, запоминаем его
@@ -150,7 +152,7 @@ async def get_last_five_news(message: types.Message):
 
 @dp.message_handler(Text(equals="🍅🗞️Свежие новости"))
 async def get_fresh_news(message: types.Message):
-    if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
+    """if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
         fresh_news = check_news_update()
 
         if len(fresh_news) >= 1:
@@ -165,7 +167,17 @@ async def get_fresh_news(message: types.Message):
     else:
         await bot.send_message(message.from_user.id, not_sub_message, reply_markup=check_sub_menu)
         # await bot.send_message(message.from_user.id, not_sub_message, reply_markup=sub_button, disable_notification=True)
-        # await message.answer(not_sub_message)  # , reply_markup=sub_button)
+        # await message.answer(not_sub_message)  # , reply_markup=sub_button)"""
+
+    fresh_news = check_news_update()
+    if len(fresh_news) >= 1:
+        for k, v in sorted(fresh_news.items()):
+            news = f"{hbold(datetime.datetime.fromtimestamp(v['article_date_timestamp']))}\n" \
+                   f"{hlink(v['article_title'], v['article_url'])}"
+
+            await message.answer(news)
+    else:
+        await message.answer("Пока нет свежих новостей...")
 
 async def news_every_minute():
     while True:
