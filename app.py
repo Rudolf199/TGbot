@@ -76,14 +76,14 @@ async def subscribe(message: types.Message):
         # await bot.send_message(message.from_user.id, not_sub_message, reply_markup=sub_button)
         # await message.answer(not_sub_message)  # , reply_markup=sub_button)
 
-@dp.callback_query_handler(text="subchanneldone")
+"""@dp.callback_query_handler(text="subchanneldone")
 async def sub_channel_done(message: types.Message):
     await bot.delete_message(message.from_user.id, message.message.message_id)
     if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
         await message.answer("Лента новостей", reply_markup=start_buttons)
     else:
         await bot.send_message(message.from_user.id, not_sub_message, reply_markup=check_sub_menu)
-
+"""
 
 @dp.message_handler(Text(equals="❌ Отписаться"))
 async def unsubscribe(message: types.Message):
