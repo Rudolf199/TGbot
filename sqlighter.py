@@ -1,11 +1,17 @@
 import psycopg2
 
 
-class SQLighter:
+class DataBase:
 
-    def __init__(self, database):
+    def __init__(self, database, host, password, port, user):
         """Подключаемся к БД и сохраняем курсор соединения"""
-        self.connection = psycopg2.connect(database, sslmode="require")
+        self.connection = psycopg2.connect(
+            host=host,
+            user=user,
+            password=password,
+            database=database,
+            port=port
+        )
         self.cursor = self.connection.cursor()
 
     def get_subscriptions(self, status = True):
@@ -19,7 +25,7 @@ class SQLighter:
             result = self.cursor.execute('SELECT * FROM `subscriptions` WHERE `user_id` = ?', (user_id,)).fetchall()
             return bool(len(result))
 
-    def add_subscriber(self, user_id, status = True):
+    def add_subscriber(self, user_id, status=True):
         """Добавляем нового подписчика"""
         with self.connection:
             return self.cursor.execute("INSERT INTO `subscriptions` (`user_id`, `status`) VALUES(?,?)", (user_id,status))
@@ -28,7 +34,6 @@ class SQLighter:
         """Обновляем статус подписки пользователя"""
         with self.connection:
             return self.cursor.execute("UPDATE `subscriptions` SET `status` = ? WHERE `user_id` = ?", (status, user_id))
-
 
     def close(self):
         """Закрываем соединение с БД"""
