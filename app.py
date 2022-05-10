@@ -209,6 +209,7 @@ async def news_every_minute():
 
 
 if __name__ == '__main__':
+    get_first_news()
     loop = asyncio.get_event_loop()
     loop.create_task(news_every_minute())
     executor.start_polling(dp)
