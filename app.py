@@ -117,7 +117,7 @@ async def sub_channel(message: types.Message):
 @dp.message_handler(Text(equals="📰 Все новости"))
 async def get_all_news(message: types.Message):
     if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
-        get_first_news()
+        # get_first_news()
         with open("news_dict.json", encoding='utf-8') as file:
             news_dict = json.load(file)
 
@@ -143,7 +143,7 @@ async def get_all_news(message: types.Message):
 @dp.message_handler(Text(equals="⬅ Последние 5 новостей"))
 async def get_last_five_news(message: types.Message):
     if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
-        get_first_news()
+        # get_first_news()
         with open("news_dict.json", encoding='utf-8') as file:
             news_dict = json.load(file)
 
@@ -176,7 +176,7 @@ async def get_fresh_news(message: types.Message):
         await bot.send_message(message.from_user.id, not_sub_message, reply_markup=check_sub_menu)
         # await bot.send_message(message.from_user.id, not_sub_message, reply_markup=sub_button, disable_notification=True)
         # await message.answer(not_sub_message)  # , reply_markup=sub_button)"""
-    get_first_news()
+    # get_first_news()
     fresh_news = check_news_update()
     if len(fresh_news) >= 1:
         for k, v in sorted(fresh_news.items()):
@@ -189,7 +189,7 @@ async def get_fresh_news(message: types.Message):
 
 async def news_every_minute():
     while True:
-        get_first_news()
+        # get_first_news()
         fresh_news = check_news_update()
         # получаем список подписчиков
         subscribers = db.get_subscriptions()
