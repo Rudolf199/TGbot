@@ -4,5 +4,4 @@ asyncio
 requests
 aiogram
 psycopg2
-time
 

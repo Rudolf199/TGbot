@@ -9,12 +9,16 @@ from inlines import check_sub_menu
 from news import check_news_update
 from sqlighter import DataBase
 from config import db_uri
-from config import user, port, password, database, host
+from config import user, port, password, database, host, heroku_CLI
+import psycopg2
+
 
 bot = Bot(token=token, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 db = DataBase(host=host, password=password, port=port, user=user, database=database)
 # start_buttons = ["📰 Все новости", "⬅ Последние 5 новостей", "🍅🗞️Свежие новости"]
+# db_connection = psycopg2.connect(host=host, password=password, port=port, user=user, database=database)
+# db_object = db_connection.cursor()
 
 def check_sub_channel(chat_member):
     print(chat_member['status'], "\n")
@@ -65,10 +69,12 @@ async def subscribe(message: types.Message):
         if not db.subscriber_exists(message.from_user.id):
             # если юзера нет в базе, добавляем его
             db.add_subscriber(message.from_user.id)
+            await message.answer("you are in my database :)")
         else:
             await message.answer("wait...")
             # если он есть, то просто обновляем ему статус
             db.update_subscription(message.from_user.id, True)
+
 
         await message.answer("Вы подписались на рассылку 📧")
     else:
