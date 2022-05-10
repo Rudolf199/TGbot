@@ -6,7 +6,7 @@ from aiogram.utils.markdown import hbold, hunderline, hcode, hlink
 from aiogram.dispatcher.filters import Text
 from config import token, user_id, chat_id, not_sub_message, channel_url
 from inlines import check_sub_menu
-from news import check_news_update
+from news import check_news_update, get_first_news
 from sqlighter import DataBase
 from config import db_uri
 from config import user, port, password, database, host, heroku_CLI
@@ -64,7 +64,7 @@ async def start(message: types.Message):
 
 @dp.message_handler(Text(equals="✔ Подписаться"))
 async def subscribe(message: types.Message):
-    await message.answer("this works")
+    # await message.answer("this works")
     if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
         if not db.subscriber_exists(message.from_user.id):
             # если юзера нет в базе, добавляем его
@@ -93,7 +93,7 @@ async def sub_channel_done(message: types.Message):
 
 @dp.message_handler(Text(equals="❌ Отписаться"))
 async def unsubscribe(message: types.Message):
-    await message.answer("this works too")
+    # await message.answer("this works too")
     if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
         if not db.subscriber_exists(message.from_user.id):
             # если юзера нет в базе, добавляем его с неактивной подпиской, запоминаем его
@@ -117,6 +117,7 @@ async def sub_channel(message: types.Message):
 @dp.message_handler(Text(equals="📰 Все новости"))
 async def get_all_news(message: types.Message):
     if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
+        get_first_news()
         with open("news_dict.json", encoding='utf-8') as file:
             news_dict = json.load(file)
 
@@ -142,6 +143,7 @@ async def get_all_news(message: types.Message):
 @dp.message_handler(Text(equals="⬅ Последние 5 новостей"))
 async def get_last_five_news(message: types.Message):
     if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
+        get_first_news()
         with open("news_dict.json", encoding='utf-8') as file:
             news_dict = json.load(file)
 
@@ -174,7 +176,7 @@ async def get_fresh_news(message: types.Message):
         await bot.send_message(message.from_user.id, not_sub_message, reply_markup=check_sub_menu)
         # await bot.send_message(message.from_user.id, not_sub_message, reply_markup=sub_button, disable_notification=True)
         # await message.answer(not_sub_message)  # , reply_markup=sub_button)"""
-
+    get_first_news()
     fresh_news = check_news_update()
     if len(fresh_news) >= 1:
         for k, v in sorted(fresh_news.items()):
@@ -187,6 +189,7 @@ async def get_fresh_news(message: types.Message):
 
 async def news_every_minute():
     while True:
+        get_first_news()
         fresh_news = check_news_update()
         # получаем список подписчиков
         subscribers = db.get_subscriptions()
