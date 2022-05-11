@@ -57,7 +57,7 @@ async def start(message: types.Message):
     # keyboard.add(*start_buttons)
 
     await message.answer("Лента новостей", reply_markup=start_buttons)
-    
+
 @dp.message_handler(Text(equals="✔ Подписаться"))
 async def subscribe(message: types.Message):
     # await message.answer("this works")
@@ -112,28 +112,25 @@ async def sub_channel(message: types.Message):
 
 @dp.message_handler(Text(equals="📰 Все новости"))
 async def get_all_news(message: types.Message):
-    if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
-        # get_first_news()
-        with open("news_dict.json", encoding='utf-8') as file:
-            news_dict = json.load(file)
 
-        for k, v in sorted(news_dict.items()):
-            # news = f"<b>{datetime.datetime.fromtimestamp(v['article_date_timestamp'])}</b>\n" \
-            #        f"<u>{v['article_title']}</u>\n" \
-            #        f"<code>{v['article_desc']}</code>\n" \
-            #        f"{v['article_url']}"
-            # news = f"{hbold(datetime.datetime.fromtimestamp(v['article_date_timestamp']))}\n" \
-            #        f"{hunderline(v['article_title'])}\n" \
-            #        f"{hcode(v['article_desc'])}\n" \
-            #        f"{hlink(v['article_title'], v['article_url'])}"
-            news = f"{hbold(datetime.datetime.fromtimestamp(v['article_date_timestamp']))}\n" \
-                   f"{hlink(v['article_title'], v['article_url'])}"
+    # get_first_news()
+    with open("news_dict.json", encoding='utf-8') as file:
+        news_dict = json.load(file)
 
-            await message.answer(news)
-    else:
-        # await bot.send_message(message.from_user.id, not_sub_message, reply_markup=sub_button)
-        await bot.send_message(message.from_user.id, not_sub_message, reply_markup=check_sub_menu)
-        # await message.answer(not_sub_message) # , reply_markup=sub_button)
+    for k, v in sorted(news_dict.items()):
+        # news = f"<b>{datetime.datetime.fromtimestamp(v['article_date_timestamp'])}</b>\n" \
+        #        f"<u>{v['article_title']}</u>\n" \
+        #        f"<code>{v['article_desc']}</code>\n" \
+        #        f"{v['article_url']}"
+        # news = f"{hbold(datetime.datetime.fromtimestamp(v['article_date_timestamp']))}\n" \
+        #        f"{hunderline(v['article_title'])}\n" \
+        #        f"{hcode(v['article_desc'])}\n" \
+        #        f"{hlink(v['article_title'], v['article_url'])}"
+        news = f"{hbold(datetime.datetime.fromtimestamp(v['article_date_timestamp']))}\n" \
+                f"{hlink(v['article_title'], v['article_url'])}"
+
+        await message.answer(news)
+
 
 
 @dp.message_handler(Text(equals="⬅ Последние 5 новостей"))
