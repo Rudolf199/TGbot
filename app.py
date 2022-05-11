@@ -55,13 +55,9 @@ async def start(message: types.Message):
         resize_keyboard=True)"""
 
     # keyboard.add(*start_buttons)
-    if check_sub_channel(await bot.get_chat_member(chat_id=chat_id, user_id=message.from_user.id)):
-        await message.answer("Лента новостей", reply_markup=start_buttons)
-    else:
-        await bot.send_message(message.from_user.id, not_sub_message, reply_markup=check_sub_menu)
-        # await message.answer(not_sub_message)  # , reply_markup=sub_button)"""
-    # await message.answer("Лента новостей", reply_markup=start_buttons)
 
+    await message.answer("Лента новостей", reply_markup=start_buttons)
+    
 @dp.message_handler(Text(equals="✔ Подписаться"))
 async def subscribe(message: types.Message):
     # await message.answer("this works")
