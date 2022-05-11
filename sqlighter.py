@@ -2,7 +2,7 @@ import psycopg2
 
 
 class DataBase:
-
+    """класс для работы с базой данных"""
     def __init__(self, database, host, password, port, user):
         """Подключаемся к БД и сохраняем курсор соединения"""
         self.connection = psycopg2.connect(
