@@ -5,5 +5,4 @@ requests
 aiogram
 psycopg2
 lxml
-json
 

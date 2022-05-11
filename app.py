@@ -205,7 +205,7 @@ async def news_every_minute():
             for s in subscribers:
                 await bot.send_message(s[1], "Пока нет свежих новостей...", disable_notification=True)
 
-        await asyncio.sleep(1)
+        await asyncio.sleep(100)
 
 
 if __name__ == '__main__':
