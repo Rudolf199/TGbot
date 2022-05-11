@@ -88,5 +88,95 @@
         "article_title": "В даркнете набирает популярность скимминговый сервис Caramel",
         "article_url": "https://www.securitylab.ru/news/531523.php",
         "article_desc": "Новый ресурс работает по модели «скиммер как услуга» (skimmer-as-a-service)."
+    },
+    "531575": {
+        "article_date_timestamp": 1652283660.0,
+        "article_title": "Цепочки поставок немецких компаний под угрозой",
+        "article_url": "https://www.securitylab.ru/news/531575.php",
+        "article_desc": "Вредоносные npm-пакеты нацелены на ряд известных немецких компаний."
+    },
+    "531577": {
+        "article_date_timestamp": 1652280385.0,
+        "article_title": "Данные 21 миллиона пользователей бесплатных VPN слиты в Telegram",
+        "article_url": "https://www.securitylab.ru/news/531577.php",
+        "article_desc": "10 ГБ данных компаний SuperVPN, GeckoVPN и ChatVPN доступны для бесплатной загрузки в нескольких Telegram-группах."
+    },
+    "531576": {
+        "article_date_timestamp": 1652279820.0,
+        "article_title": "Минцифры создает национальное «озеро» данных «ГосДата.хаб»",
+        "article_url": "https://www.securitylab.ru/news/531576.php",
+        "article_desc": "Минцифры России приступает к разработке ГосДата.хаба – проекта, объединяющего потоки обезличенных данных госорганов."
+    },
+    "531574": {
+        "article_date_timestamp": 1652276213.0,
+        "article_title": "В сеть утекли пароли сотрудников самых крупных компаний США",
+        "article_url": "https://www.securitylab.ru/news/531574.php",
+        "article_desc": "Технологический сектор подвергся наиболее серьезной утечке идентификационных данных"
+    },
+    "531573": {
+        "article_date_timestamp": 1652275977.0,
+        "article_title": "Google Диск стал главным источником загрузок вредоносного ПО среди облачных приложений",
+        "article_url": "https://www.securitylab.ru/news/531573.php",
+        "article_desc": "За последние 12 месяцев число фишинговых загрузок резко возросло на 450%"
+    },
+    "531571": {
+        "article_date_timestamp": 1652271888.0,
+        "article_title": "Вебинар «Защита критической информационной инфраструктуры»",
+        "article_url": "https://www.securitylab.ru/news/531571.php",
+        "article_desc": "19 мая Учебный центр «Информзащита» проведет бесплатный вебинар «Защита критической информационной инфраструктуры»."
+    },
+    "531570": {
+        "article_date_timestamp": 1652271234.0,
+        "article_title": "Майские обновления от Microsoft исправляют уязвимость 0-day",
+        "article_url": "https://www.securitylab.ru/news/531570.php",
+        "article_desc": "В общей сложности в этом месяце плановые обновления от Microsoft исправляют 74 уязвимости в продуктах компании."
+    },
+    "531568": {
+        "article_date_timestamp": 1652268043.0,
+        "article_title": "Сводка программ-вымогателей: последние данные на май 2022 года",
+        "article_url": "https://www.securitylab.ru/news/531568.php",
+        "article_desc": "приведена статистика вредоносных атак на май 2022 года"
+    },
+    "531567": {
+        "article_date_timestamp": 1652267478.0,
+        "article_title": "Злоумышленники совершили более 65 000 атак с помощью PrintNightmare",
+        "article_url": "https://www.securitylab.ru/news/531567.php",
+        "article_desc": "Если пользователь недавно использовал диспетчер очереди печати Windows, он может стать жертвой взлома."
+    },
+    "531564": {
+        "article_date_timestamp": 1652255706.0,
+        "article_title": "Как конфликт между РФ и Украиной может повлиять на киберландшафт – 5 возможных сценариев",
+        "article_url": "https://www.securitylab.ru/news/531564.php",
+        "article_desc": "Эксперты изучили двигатели российско-украинского конфликта с целью спрогнозировать его возможное влияние на киберпространство."
+    },
+    "531563": {
+        "article_date_timestamp": 1652254702.0,
+        "article_title": "GitHub значительно улучшил 2FA для npm-аккаунтов",
+        "article_url": "https://www.securitylab.ru/news/531563.php",
+        "article_desc": "Теперь владелец npm-аккаунта может сделать двухфакторную защиту многофакторной."
+    },
+    "531562": {
+        "article_date_timestamp": 1652254286.0,
+        "article_title": "Фото авиакатастроф вынудило самолет отказаться от полета",
+        "article_url": "https://www.securitylab.ru/news/531562.php",
+        "article_desc": "Самолет вернулся со взлетной полосы к терминалу после того, как пассажиры получили на свои телефоны фото авиакатастроф."
+    },
+    "531561": {
+        "article_date_timestamp": 1652251046.0,
+        "article_title": "Британское правительство выпустило инструмент для проверки безопасности электронной почты",
+        "article_url": "https://www.securitylab.ru/news/531561.php",
+        "article_desc": "Бесплатный инструмент поможет организациям с выявлением уязвимостей."
+    },
+    "531559": {
+        "article_date_timestamp": 1652250914.0,
+        "article_title": "Android пользователи водят авто лучше владельцев iPhone",
+        "article_url": "https://www.securitylab.ru/news/531559.php",
+        "article_desc": "Исследование также показало, что владельцы Android скромнее и честнее."
+    },
+    "531560": {
+        "article_date_timestamp": 1652250907.0,
+        "article_title": "Глава британской спецслужбы предупредил об атаках российских хакеров на союзников Украины",
+        "article_url": "https://www.securitylab.ru/news/531560.php",
+        "article_desc": "Хотя полномасштабная кибервойна между РФ и Украиной пока не разгорелась, кибератаки по-прежнему продолжаются."
     }
 }

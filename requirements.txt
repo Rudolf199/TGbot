@@ -4,4 +4,5 @@ asyncio
 requests
 aiogram
 psycopg2
+lxml
 
