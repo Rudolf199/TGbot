@@ -178,5 +178,95 @@
         "article_title": "Глава британской спецслужбы предупредил об атаках российских хакеров на союзников Украины",
         "article_url": "https://www.securitylab.ru/news/531560.php",
         "article_desc": "Хотя полномасштабная кибервойна между РФ и Украиной пока не разгорелась, кибератаки по-прежнему продолжаются."
+    },
+    "531666": {
+        "article_date_timestamp": 1652699152.0,
+        "article_title": "Российский магазин приложений NashStore доступен для скачивания",
+        "article_url": "https://www.securitylab.ru/news/531666.php",
+        "article_desc": "Российский магазин приложений NashStore стал доступен для пользователей Android, в нем уже представлены более тысячи приложений."
+    },
+    "531664": {
+        "article_date_timestamp": 1652694589.0,
+        "article_title": "Предугадать дальнейшие атаки китайских хакеров помогут новые законы в КНР",
+        "article_url": "https://www.securitylab.ru/news/531664.php",
+        "article_desc": "Следя за принятием новых законов в Поднебесной, можно предугадывать дальнейшие действия китайских хакеров."
+    },
+    "531665": {
+        "article_date_timestamp": 1652694380.0,
+        "article_title": "В следующем обновлении Windows 11 появятся новые функции",
+        "article_url": "https://www.securitylab.ru/news/531665.php",
+        "article_desc": "Следующая версия будет содержать улучшения в дизайне, новые опции и защиту безопасности"
+    },
+    "531663": {
+        "article_date_timestamp": 1652692688.0,
+        "article_title": "DemHack 4: решения для приватности и доступа к информации во время",
+        "article_url": "https://www.securitylab.ru/news/531663.php",
+        "article_desc": "Заявки на участие в хакатоне принимаются от команд в составе от 1 до 5 человек из всех регионов России"
+    },
+    "531661": {
+        "article_date_timestamp": 1652692391.0,
+        "article_title": "Европа усилит кибербезопасность",
+        "article_url": "https://www.securitylab.ru/news/531661.php",
+        "article_desc": "Евросоюз ввел новые правила для улучшения защиты и мер противодействия киберпреступлениям"
+    },
+    "531662": {
+        "article_date_timestamp": 1652688621.0,
+        "article_title": "Эксперты обнаружили 134 уязвимости в обработке скриптов приложениями Word и Acrobat",
+        "article_url": "https://www.securitylab.ru/news/531662.php",
+        "article_desc": "Специалисты создали инструмент Cooper для выявления ошибок в том, как Word и Acrobat обрабатывают JavaScript."
+    },
+    "531658": {
+        "article_date_timestamp": 1652685869.0,
+        "article_title": "CERT-UA предупреждает о новых атаках APT Armageddon",
+        "article_url": "https://www.securitylab.ru/news/531658.php",
+        "article_desc": "Новая фишинговая кампания волной накрыла Украину."
+    },
+    "531655": {
+        "article_date_timestamp": 1652685598.0,
+        "article_title": "SonicWall исправила три уязвимости в устройствах SSL VPN серии SMA 1000",
+        "article_url": "https://www.securitylab.ru/news/531655.php",
+        "article_desc": "Одна из уязвимостей – критическая и позволяет злоумышленникам обходить аутентификацию."
+    },
+    "531660": {
+        "article_date_timestamp": 1652684541.0,
+        "article_title": "России не хватает 30-50 тысяч специалистов по кибербезопасности",
+        "article_url": "https://www.securitylab.ru/news/531660.php",
+        "article_desc": "Порядка 100 тыс. российских организаций столкнутся с проблемой поиска сотрудников в области кибербезопасности."
+    },
+    "531657": {
+        "article_date_timestamp": 1652681733.0,
+        "article_title": "Eternity Project – новый «бутик» вредоносного ПО с широким ассортиментом",
+        "article_url": "https://www.securitylab.ru/news/531657.php",
+        "article_desc": "Специалисты выявили в даркнете новый сайт, работающий по бизнес-модели «Вредоносное ПО как услуга»."
+    },
+    "531659": {
+        "article_date_timestamp": 1652677728.0,
+        "article_title": "Взлом PS5: Скрипты для дампинга файловой системы на консолях с прошивкой 4.03",
+        "article_url": "https://www.securitylab.ru/news/531659.php",
+        "article_desc": "Для дампинга потребуется консоль PS5 только с версией прошивки 4.03, на других версиях способ не сработает."
+    },
+    "531654": {
+        "article_date_timestamp": 1652677640.0,
+        "article_title": "Выходцы из Positive Technologies запускают новую компанию в области кибербезопасности",
+        "article_url": "https://www.securitylab.ru/news/531654.php",
+        "article_desc": "Открытые коды решений платформы также будут доступны всем желающим и опубликованы в отрытом доступе"
+    },
+    "531653": {
+        "article_date_timestamp": 1652676152.0,
+        "article_title": "Хроники кибервойны Россия-Украина 8-14 мая",
+        "article_url": "https://www.securitylab.ru/news/531653.php",
+        "article_desc": "Утечка данных крупных российских компаний, взлом Rutube и обвинения ЕС в кибератаке на Украину."
+    },
+    "531652": {
+        "article_date_timestamp": 1652675983.0,
+        "article_title": "Российские хакеры планировали сорвать Евровидение",
+        "article_url": "https://www.securitylab.ru/news/531652.php",
+        "article_desc": "В качестве организаторов атаки идентифицирована хакерская группа Killnet и ее филиал «Легион»."
+    },
+    "531648": {
+        "article_date_timestamp": 1652626660.0,
+        "article_title": "Рассерженный IT-админ удалил базы данных своего работодателя и получил 7 лет тюрьмы",
+        "article_url": "https://www.securitylab.ru/news/531648.php",
+        "article_desc": "Сотрудник неоднократно сообщал своему начальству о проблемах с безопасностью, но его предупреждения были проигнорированы."
     }
 }

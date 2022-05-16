@@ -41,13 +41,13 @@ def get_first_news():
             "article_desc": article_desc
         }
 
-    with open("news_dict.json", "w", encoding='utf-8') as file:
+    with open("src/news_dict.json", "w", encoding='utf-8') as file:
         json.dump(news_dict, file, indent=4, ensure_ascii=False)
 
 
 def check_news_update():
     # проверяет наличие новых новостей на сайте и пишет их в файл, обновляет данные
-    with open("news_dict.json", encoding='utf-8') as file:
+    with open("src/news_dict.json", encoding='utf-8') as file:
         news_dict = json.load(file)
 
     headers = {
@@ -92,7 +92,7 @@ def check_news_update():
                 "article_desc": article_desc
             }
 
-    with open("news_dict.json", "w", encoding='utf-8') as file:
+    with open("src/news_dict.json", "w", encoding='utf-8') as file:
         json.dump(news_dict, file, indent=4, ensure_ascii=False)
 
     return fresh_news
