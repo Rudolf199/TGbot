@@ -6,7 +6,7 @@ import requests
 
 
 def get_first_news():
-    # функция парсит все новости с сайта, и сохраняет определенные данные в json файл
+    """функция парсит все новости с сайта, и сохраняет определенные данные в json файл"""
     headers = {
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
                       " Chrome/101.0.4951.54 Safari/537.36"
@@ -46,7 +46,7 @@ def get_first_news():
 
 
 def check_news_update():
-    # проверяет наличие новых новостей на сайте и пишет их в файл, обновляет данные
+    """проверяет наличие новых новостей на сайте и пишет их в файл, обновляет данные"""
     with open("src/news_dict.json", encoding='utf-8') as file:
         news_dict = json.load(file)
 
@@ -96,12 +96,3 @@ def check_news_update():
         json.dump(news_dict, file, indent=4, ensure_ascii=False)
 
     return fresh_news
-
-
-def main():
-    # get_first_news()
-    print(check_news_update())
-
-
-if __name__ == '__main__':
-    main()

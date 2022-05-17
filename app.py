@@ -13,9 +13,7 @@ import os
 
 
 bot = Bot(token=os.environ['bottoken'], parse_mode=types.ParseMode.HTML)
-# bot = Bot(token=token, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
-# db = DataBase(host=host, password=password, port=port, user=user, database=database)
 db = DataBase(host=os.environ['dbhost'], password=os.environ['password'], port=os.environ['port'],
               user=os.environ['user'], database=os.environ['database'])
 
