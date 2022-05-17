@@ -55,7 +55,7 @@ python3 run.py
 ```
 -----
 ⚠️**Убедитесь, что в вашей таблице базы данных есть следующие поля**
-1. *id - типа int, с параметром primary_key*
+1. *id - типа SERIAL, с параметром primary_key*
 2. *user_id - типа bigint, not null*
 3. *status - типа boolean, not null, с дефолтным значением True*
 ---
