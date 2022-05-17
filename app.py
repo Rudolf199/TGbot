@@ -1,24 +1,3 @@
-import subprocess
-import sys
-import os
-
-subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
-print("Your bot token please: ")
-os.environ['bottoken'] = input()
-print("Your database host: ")
-os.environ['dbhost'] = input()
-print("Your db password: ")
-os.environ['password'] = input()
-print("Your db port: ")
-os.environ['port'] = input()
-print("Your db user: ")
-os.environ['user'] = input()
-print("your database: ")
-os.environ['database'] = input()
-print("Your channel url: ")
-os.environ['channel'] = input()
-
-
 import asyncio
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.utils.markdown import hbold, hlink
@@ -30,6 +9,7 @@ import json
 from src.inlines import check_sub_menu
 from src.news import check_news_update
 from src.sqlighter import DataBase
+import os
 
 
 bot = Bot(token=os.environ['bottoken'], parse_mode=types.ParseMode.HTML)
